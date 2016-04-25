@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.netease.myBlog.page.BlogEditPage" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp" >
+
+        <Button
+            android:id="@+id/publish_blog_button"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/common_button_shape"
+            android:text="发布"
+            android:textColor="@color/orange"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/editPage_back_button"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="134dp"
+            android:layout_height="34dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="添加博客文章"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_light" />
+
+            <EditText
+                android:id="@+id/title_EditeTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/common_edittext_shape"
+                android:gravity="center_vertical"
+                android:hint=" 请输入博文标题"
+                android:lines="1" />
+
+            <View
+                android:id="@+id/linear_View"
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="@color/gray_light" />
+
+            <EditText
+                android:id="@+id/context_editTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_edittext_shape"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="输入您的内容..."
+                android:minLines="10" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/select_pic_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/camera_icon" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_light" />
+
+            <ImageView
+                android:id="@+id/image_textView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/context_textView" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
